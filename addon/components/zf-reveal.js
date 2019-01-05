@@ -28,5 +28,8 @@ export default Ember.Component.extend(zfWidget, {
    */
   handleInsert() {
     this.$().css("outline", "none");
+    this.$().on("closed.zf.reveal", () => {
+      this.sendAction('onClosed');
+    });
   }
 });
