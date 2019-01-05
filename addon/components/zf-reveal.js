@@ -31,5 +31,11 @@ export default Ember.Component.extend(zfWidget, {
     this.$().on("closed.zf.reveal", () => {
       this.sendAction('onClosed');
     });
+    this.$().on("open.zf.reveal", () => {
+      this.sendAction('onOpen');
+    });
+    this.$().on("closeme.zf.reveal", () => {
+      this.sendAction('onCloseme');
+    });    
   }
 });
